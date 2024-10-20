@@ -5,7 +5,7 @@ If you'd like to help out, you've come to the right place!
 
 ## Dev environment setup
 
-1. Clone the repository: `git clone git@github.com:theodorejb/peachy-sql.git`
+1. Clone the repository: `git clone git@github.com:DevTheorem/PeachySQL.git`
 2. Install dependencies: `composer install`
 
 ## Tests
