@@ -47,16 +47,16 @@ jobs:
         run: composer validate --strict
 
       - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v3"
-
-      - name: Perform static analysis
-        run: composer analyze -- --error-format=github
-        if: ${{ matrix.php == '8.5' }}
+        uses: "ramsey/composer-install@v4"
 
       - name: Run PHPUnit
         run: composer test-without-mssql
         env:
           POSTGRES_HOST: localhost
+
+      - name: Perform static analysis
+        run: composer analyze -- --error-format=github
+        if: ${{ matrix.php == '8.5' }}
 
       - name: Check Formatting
         run: vendor/bin/php-cs-fixer check -v --show-progress=dots --stop-on-violation --using-cache=no

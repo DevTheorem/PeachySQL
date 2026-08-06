@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.0.2] - 2026-08-06
+### Changed
+- `Statement::getAll()` is now annotated as returning `list<mixed[]>` rather than an
+  arbitrarily keyed array, so static analysis knows the rows are sequentially indexed.
+- PHP 8.2+ is now required.
+- Excluded additional config files from Git archive.
+
+
 ## [7.0.1] - 2025-01-26
 ### Changed
 - Improved some type annotations and simplified internal test configuration.
@@ -347,6 +355,7 @@ return the value of their callback function, making it easier to use data outsid
 - Initial release
 
 
+[7.0.2]: https://github.com/devtheorem/peachy-sql/compare/v7.0.1...v7.0.2
 [7.0.1]: https://github.com/devtheorem/peachy-sql/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/devtheorem/peachy-sql/compare/v6.3.1...v7.0.0
 [6.3.1]: https://github.com/devtheorem/peachy-sql/compare/v6.3.0...v6.3.1

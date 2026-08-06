@@ -95,11 +95,11 @@ class Statement
 
     /**
      * Returns all rows selected by the query.
-     * @return mixed[]
+     * @return list<mixed[]>
      */
     public function getAll(): array
     {
-        return iterator_to_array($this->getIterator());
+        return iterator_to_array($this->getIterator(), false);
     }
 
     /**
